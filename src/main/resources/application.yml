@@ -1,0 +1,9 @@
+spring:
+  application:
+    name: traductor
+  r2dbc:
+    url: r2dbc:pool:postgresql://aws-0-us-west-1.pooler.supabase.com:5432/postgres
+    username: postgres.kytrmfajurneznxkenry
+    password: Keylogers1221
+server:
+  port: 8085
