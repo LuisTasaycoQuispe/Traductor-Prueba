@@ -1,0 +1,31 @@
+name: Docker Build and Push
+on:
+  push:
+    branches:
+      - develop
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read version
+        id: read_version
+        run: |
+          VERSION=$(cat version.txt)
+          echo "VERSION=${VERSION}" >> $GITHUB_ENV
+
+      - name: Build Docker image
+        run: |
+          docker build -t luistasayco2004/traductor:${{ env.VERSION }} .
+
+      - name: Docker Hub Login
+        env:
+          DOCKER_HUB_USERNAME: ${{ secrets.DOCKER_HUB_USERNAME }}
+          DOCKER_HUB_TOKEN: ${{ secrets.DOCKER_HUB_TOKEN }}
+        run: echo "${{ secrets.DOCKER_HUB_TOKEN }}" | docker login -u "${DOCKER_HUB_USERNAME}" --password-stdin
+
+      - name: Push Docker image
+        run: |
+          docker push luistasayco2004/traductor:${{ env.VERSION }}
