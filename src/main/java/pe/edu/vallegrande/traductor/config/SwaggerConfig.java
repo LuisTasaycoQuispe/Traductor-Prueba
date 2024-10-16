@@ -15,7 +15,7 @@ public class SwaggerConfig {
     public OpenAPI apiInfo() {
         return new OpenAPI()
                 .servers(Collections
-                        .singletonList(new Server().url("https://miniature-acorn-qjxq4rwgrwg3x467-8085.app.github.dev/")))
+                        .singletonList(new Server().url("https://miniature-engine-9p9q7r7p4x63xj4g-8080.app.github.dev/")))
                 .info(new Info()
 
                         .title("TRADUCTOR")

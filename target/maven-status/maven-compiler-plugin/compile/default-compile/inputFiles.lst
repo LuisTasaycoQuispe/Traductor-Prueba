@@ -1,0 +1,7 @@
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/TraductorApplication.java
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/config/SwaggerConfig.java
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/model/TranslateRequestBody.java
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/model/Traslator.java
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/respository/TraslatorRepository.java
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/rest/traductorRest.java
+/workspaces/Traductor-Prueba/src/main/java/pe/edu/vallegrande/traductor/service/TraductorService.java

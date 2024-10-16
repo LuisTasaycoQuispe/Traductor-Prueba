@@ -1,0 +1,7 @@
+pe/edu/vallegrande/traductor/respository/TraslatorRepository.class
+pe/edu/vallegrande/traductor/rest/traductorRest.class
+pe/edu/vallegrande/traductor/model/Traslator.class
+pe/edu/vallegrande/traductor/model/TranslateRequestBody.class
+pe/edu/vallegrande/traductor/config/SwaggerConfig.class
+pe/edu/vallegrande/traductor/service/TraductorService.class
+pe/edu/vallegrande/traductor/TraductorApplication.class

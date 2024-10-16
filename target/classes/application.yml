@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: traductor
+  r2dbc:
+    url: ${DATABASE_URL}
+api:
+  key: ${DATABASE_API_KEY}
+
+server:
+  port: 8085

@@ -15,11 +15,16 @@ import pe.edu.vallegrande.traductor.model.Traslator;
 import pe.edu.vallegrande.traductor.respository.TraslatorRepository;
 import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
+import org.springframework.beans.factory.annotation.Value;
 
 @Service
 @Slf4j
 public class TraductorService {
-     private static final String TRANSLATOR_KEY = "91d63c3b3440407da3f9898ecd869c52"; 
+    
+    @Value("${api.key}")
+    private String llave;
+
+
     private static final String TRANSLATOR_LOCATION = "eastasia";
     private static final String TRANSLATOR_ENDPOINT = "https://api.cognitive.microsofttranslator.com/";
     private static final String TRANSLATOR_ROUTE = "/translate?api-version=3.0";
@@ -42,7 +47,7 @@ public class TraductorService {
             Request request = new Request.Builder()
                 .url(urlWithParams)
                 .post(body)
-                .addHeader("Ocp-Apim-Subscription-Key", TRANSLATOR_KEY)
+                .addHeader("Ocp-Apim-Subscription-Key", llave)
                 .addHeader("Ocp-Apim-Subscription-Region", TRANSLATOR_LOCATION)
                 .addHeader("Content-type", "application/json")
                 .build();
