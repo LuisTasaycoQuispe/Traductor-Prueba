@@ -1,0 +1,34 @@
+name: Incrementador Version
+on:
+  push:
+    branches:
+      - develop
+
+jobs:
+  increment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Read and Increment Version
+        id: increment_version
+        run: |
+          VERSION=$(cat version.txt || echo "0.0")
+          IFS='.' read -r major minor <<< "$VERSION"
+          minor=$((minor + 1))
+          if [[ "$minor" -eq 10 ]]; then
+            minor=0
+            major=$((major + 1))
+          fi
+          NEW_VERSION="$major.$minor"
+          echo "$NEW_VERSION" > version.txt
+          echo "NEW_VERSION=${NEW_VERSION}" >> $GITHUB_ENV
+
+      - name: Commit version
+        run: |
+          git config --local user.name "GitHub Action"
+          git config --local user.email "action@github.com"
+          git add version.txt
+          git commit -m "Update version to ${{ env.NEW_VERSION }}"
+          git push https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} HEAD:develop
