@@ -2,7 +2,6 @@
   <img src="https://eu01.edcwb.com/educanews/interface/images/noticies/21345-4d886d43fa244e7c8aa987eb14bb24a0.jpg">
 </p>
 
-  
 # Azure AI Services | Traductor 🌍🎌🍁 <img src="https://media.tenor.com/9MZ0S-cWtakAAAAi/mewing.gif" alt="Crear un nuevo recurso" width="35" style="border: 2px solid #FF5733;">
 
 ## Descripción
