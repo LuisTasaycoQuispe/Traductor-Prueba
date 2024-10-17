@@ -9,7 +9,6 @@
 
 Este proyecto se centra en la implementación de un traductor multilingüe utilizando los servicios de Azure AI. Con este traductor, puedes traducir textos entre múltiples idiomas de manera eficiente y precisa, aprovechando la tecnología avanzada de procesamiento de lenguaje natural de Azure. Es ideal para aplicaciones que requieren traducción en tiempo real, interfaces de usuario multilingües, o cualquier solución que necesite romper las barreras del idioma.
 
-
 ## Algunos Enlaces que podrian ayudar a comprender mejor su elaboracion 🧐
 
 - Video de Como Hacerlo en Postman => [Video de Postman](https://www.youtube.com/watch?v=a-JJrILw73Y)
